@@ -1,5 +1,5 @@
 ---
-name: Build jessie
+name: Build stretch
 
 on:
   pull_request:
