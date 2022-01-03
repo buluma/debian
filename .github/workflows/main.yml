@@ -42,16 +42,16 @@ jobs:
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
           
-      - name: Create
-        id: create
-        uses: atlassian/gajira-create@master
+      - name: Jira Create issue
+        # You may pin to the exact commit or the version.
+        # uses: atlassian/gajira-create@c0a9c69ac9d6aa063fed57201e55336ada860183
+        uses: atlassian/gajira-create@v2.0.1
         with:
+          # Key of the project
           project: test
-          issuetype: Task
-          summary: |
-            Build completed for ${{ github.repository }}
-          description: |
-            Compare branch
-
-      - name: Log created issue
-        run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+          # Type of the issue to be created. Example: 'Incident'
+          issuetype: test
+          # Issue summary
+          summary: test
+          # Issue description
+          description: test # optional
