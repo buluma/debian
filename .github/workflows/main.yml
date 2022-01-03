@@ -35,6 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+      - name: Login
+        uses: atlassian/gajira-login@master
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          
       - name: Jira Create issue
         # You may pin to the exact commit or the version.
         # uses: atlassian/gajira-create@c0a9c69ac9d6aa063fed57201e55336ada860183
