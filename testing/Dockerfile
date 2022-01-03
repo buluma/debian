@@ -6,7 +6,7 @@ LABEL maintainer="Michael Buluma"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible==2.10.16 cryptography"
+ENV pip_packages "ansible cryptography"
 
 RUN echo 'deb http://deb.debian.org/debian testing-backports main' > /etc/apt/sources.list.d/backports.list
 
