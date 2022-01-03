@@ -7,7 +7,7 @@ LABEL maintainer="Michael Buluma"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible cryptography"
+ENV pip_packages "ansible==3.4.0 cryptography"
 
 # Install dependencies.
 RUN apt-get update \
