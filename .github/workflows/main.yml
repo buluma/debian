@@ -50,7 +50,7 @@ jobs:
           # Key of the project
           project: test
           # Type of the issue to be created. Example: 'Incident'
-          issuetype: test
+          issuetype: Task
           # Issue summary
           summary: test
           # Issue description
