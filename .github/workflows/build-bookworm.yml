@@ -8,7 +8,7 @@ on:
       - 'bookworm/**'
       - '.github/workflows/build-bookworm.yml'
   schedule:
-    - cron: '40 *,* * * *'
+    - cron: '20 3,6 * * *'
   workflow_dispatch:
 
 jobs:
