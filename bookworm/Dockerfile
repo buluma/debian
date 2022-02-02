@@ -13,7 +13,7 @@ ENV pip_packages "ansible==3.4.0 cryptography"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv bison \
-       build-essential wget libffi-dev libelf-dev libssl-dev \
+       build-essential wget libffi-dev libelf-dev libssl-dev unattended-upgrades \
        python3-pip python3-dev python3-setuptools python3-wheel python3-apt ansible gnupg \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
