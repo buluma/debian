@@ -14,7 +14,7 @@ RUN echo 'deb http://deb.debian.org/debian testing-backports main' > /etc/apt/so
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv \
-       build-essential wget libffi-dev libssl-dev \
+       build-essential wget libffi-dev libssl-dev needrestart \
        python3-pip python3-dev python3-setuptools python3-wheel python3-apt ansible \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
