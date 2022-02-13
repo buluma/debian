@@ -29,6 +29,9 @@ jobs:
       - name: Verify Ansible is accessible in the built image.
         run: docker exec --tty test-bullseye env TERM=xterm ansible --version
 
+      - name: Scan for Vulnerabilities
+        run: docker scan --file bullseye/Dockerfile docker-scan:e2e
+
   # If on master branch, build and release image.
   release:
     name: Release
