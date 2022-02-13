@@ -2,7 +2,6 @@
 name: Build bullseye
 
 on:
-  pull_request:
   push:
     paths:
       - 'bullseye/**'
@@ -29,8 +28,8 @@ jobs:
       - name: Verify Ansible is accessible in the built image.
         run: docker exec --tty test-bullseye env TERM=xterm ansible --version
 
-      - name: Scan for Vulnerabilities
-        run: docker scan --file bullseye/Dockerfile docker-scan:e2e
+      - name: Install Docker Scanner / Scan for Vulnerabilities
+        run: yum install docker-scan-plugin && docker scan --file bullseye/Dockerfile docker-scan:e2e
 
   # If on master branch, build and release image.
   release:

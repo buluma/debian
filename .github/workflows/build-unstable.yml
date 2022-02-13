@@ -2,7 +2,6 @@
 name: Build unstable
 
 on:
-  pull_request:
   push:
     paths:
       - 'unstable/**'
