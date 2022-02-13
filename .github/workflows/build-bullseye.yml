@@ -2,7 +2,6 @@
 name: Build bullseye
 
 on:
-  pull_request:
   push:
     paths:
       - 'bullseye/**'

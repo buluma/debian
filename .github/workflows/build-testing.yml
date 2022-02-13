@@ -2,7 +2,6 @@
 name: Build testing
 
 on:
-  pull_request:
   push:
     paths:
       - 'testing/**'

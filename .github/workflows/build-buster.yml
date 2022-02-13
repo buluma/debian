@@ -2,7 +2,6 @@
 name: Build buster
 
 on:
-  pull_request:
   push:
     paths:
       - 'buster/**'
