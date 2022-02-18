@@ -51,6 +51,6 @@ jobs:
         with:
           context: stretch/
           file: stretch/Dockerfile
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ github.repository }}:debian-9, ${{ github.repository }}:stretch
