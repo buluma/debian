@@ -51,6 +51,6 @@ jobs:
         with:
           context: unstable/
           file: unstable/Dockerfile
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ github.repository }}:unstable
