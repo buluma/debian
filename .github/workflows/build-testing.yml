@@ -51,6 +51,6 @@ jobs:
         with:
           context: testing/
           file: testing/Dockerfile
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ github.repository }}:testing
