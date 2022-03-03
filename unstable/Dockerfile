@@ -4,8 +4,8 @@ LABEL maintainer="Michael Buluma"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# ENV pip_packages "ansible==2.10.7 cryptography" Ansible is installed in base?
-ENV pip_packages "cryptography"
+ENV pip_packages "ansible cryptography"
+# ENV pip_packages "cryptography"
 
 RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
 
@@ -14,7 +14,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv \
        build-essential wget libffi-dev libssl-dev \
-       python3-pip python3-dev python3-setuptools python3-wheel python3-apt ansible \
+       python3-pip python3-dev python3-setuptools python3-wheel python3-apt \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
