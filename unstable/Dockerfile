@@ -2,11 +2,10 @@ FROM debian:unstable
 
 LABEL maintainer="Michael Buluma"
 
-# ENV DEBIAN_FRONTEND noninteractive
-
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible==2.10.7 cryptography"
+# ENV pip_packages "ansible==2.10.7 cryptography" Ansible is installed in base?
+ENV pip_packages "cryptography"
 
 RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
 
