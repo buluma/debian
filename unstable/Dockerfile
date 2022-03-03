@@ -19,6 +19,9 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
+# Uninstall current ansible
+RUN pip uninstall ansible ansible-base
+
 # Upgrade pip to latest version.
 RUN pip3 install --upgrade pip
 
