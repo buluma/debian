@@ -16,11 +16,12 @@ RUN apt-get update \
        build-essential wget libffi-dev libssl-dev \
        python3-pip python3-dev python3-setuptools python3-wheel python3-apt ansible \
     && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /usr/lib/python3/dist-packages/ansible/__init__.py \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
 # Uninstall current ansible
-RUN pip uninstall ansible ansible-base
+RUN pip uninstall ansible ansible-core
 
 # Upgrade pip to latest version.
 RUN pip3 install --upgrade pip
