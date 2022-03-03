@@ -29,7 +29,8 @@ RUN pip3 install --upgrade pip
 RUN ansible --version
 
 # Install Ansible via pip.
-RUN pip3 install $pip_packages
+# RUN pip3 install $pip_packages
+RUN pip install --force-reinstall ansible ansible-core
 
 # COPY initctl_faker .
 # RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl
