@@ -6,7 +6,7 @@ LABEL maintainer="Michael Buluma"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible cryptography"
+ENV pip_packages "ansible==2.10.8 cryptography"
 
 RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
 
