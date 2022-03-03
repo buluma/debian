@@ -23,6 +23,9 @@ RUN apt-get update \
 # Upgrade pip to latest version.
 RUN pip3 install --upgrade pip
 
+# Lets check Ansibe version present
+RUN ansible --version
+
 # Install Ansible via pip.
 RUN pip3 install $pip_packages
 
