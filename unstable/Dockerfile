@@ -27,7 +27,7 @@ RUN pip uninstall ansible ansible-core
 RUN pip3 install --upgrade pip
 
 # Lets check Ansibe version present
-RUN ansible --version
+# RUN ansible --version
 
 # Install Ansible via pip.
 # RUN pip3 install $pip_packages
