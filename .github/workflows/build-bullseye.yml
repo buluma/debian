@@ -62,4 +62,4 @@ jobs:
           file: bullseye/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ github.repository }}:bullseye
+          tags: ${{ github.repository }}:bullseye, ${{ github.repository }}:11
