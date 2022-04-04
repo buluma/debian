@@ -62,4 +62,4 @@ jobs:
           file: buster/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ github.repository }}:debian-10, ${{ github.repository }}:buster
+          tags: ${{ github.repository }}:debian-10, ${{ github.repository }}:buster, ${{ github.repository }}:10
