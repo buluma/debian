@@ -1,18 +1,15 @@
 FROM debian:bookworm
-# RUN echo 'deb http://deb.debian.org/debian bookworm-backports main' > /etc/apt/sources.list.d/backports.list
 
 LABEL maintainer="Michael Buluma"
 
-# ENV DEBIAN_FRONTEND noninteractive
-
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible==3.4.0 python3-cryptography"
+ENV pip_packages "ansible==3.4.0 cryptography"
 
 # Install dependencies.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-       sudo systemd systemd-sysv bison \
+       sudo systemd systemd-sysv bison apt-utils \
        build-essential wget libffi-dev libelf-dev libssl-dev unattended-upgrades apt-listchanges \
        python3-pip python3-dev python3-setuptools python3-wheel python3-apt ansible gnupg \
     && rm -rf /var/lib/apt/lists/* \
