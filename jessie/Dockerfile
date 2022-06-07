@@ -1,5 +1,6 @@
 FROM debian:jessie
 LABEL maintainer="Michael Buluma"
+LABEL build_date="2022-06-07"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -19,7 +20,7 @@ ENV pip_packages "wheel cryptography ansible"
 # Install Ansible via pip.
 # RUN pip install --upgrade pip setuptools \
  #   && pip install $pip_packages
- 
+
  # Check ansible installed
  RUN ansible --version
 

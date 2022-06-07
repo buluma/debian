@@ -1,6 +1,7 @@
 FROM debian:testing
 
 LABEL maintainer="Michael Buluma"
+LABEL build_date="2022-06-07"
 
 # ENV DEBIAN_FRONTEND noninteractive
 

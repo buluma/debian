@@ -2,6 +2,7 @@ FROM debian:bullseye
 # RUN echo 'deb http://deb.debian.org/debian bullseye-backports main' > /etc/apt/sources.list.d/backports.list
 
 LABEL maintainer="Michael Buluma"
+LABEL build_date="2022-06-07"
 
 # ENV DEBIAN_FRONTEND noninteractive
 
