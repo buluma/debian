@@ -7,7 +7,7 @@ on:
       - 'buster/**'
       - '.github/workflows/build-buster.yml'
   schedule:
-    - cron: '20 6,8 * * *'
+    - cron: '20 6,21 * * 3'
   workflow_dispatch:
     inputs:
       debug:

@@ -7,7 +7,7 @@ on:
       - 'bullseye/**'
       - '.github/workflows/build-bullseye.yml'
   schedule:
-    - cron: '20 4,7 * * *'
+    - cron: '20 4,17 * * 2'
   workflow_dispatch:
     inputs:
       debug:

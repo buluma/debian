@@ -7,7 +7,7 @@ on:
       - 'unstable/**'
       - '.github/workflows/build-unstable.yml'
   schedule:
-    - cron: '20 5,11 * * *'
+    - cron: '20 5,11 * * 3'
   workflow_dispatch:
     inputs:
       debug:
