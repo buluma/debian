@@ -5,7 +5,7 @@ LABEL build_date="2022-06-07"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible==3.4.0 cryptography"
+ENV pip_packages "ansible cryptography"
 
 # Install dependencies.
 RUN apt-get update \
